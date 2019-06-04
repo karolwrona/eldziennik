@@ -14,12 +14,6 @@ public class Pupil {
     private int age;
     private String classMark;
 
-    public Pupil(String name, int age, String classMark) {
-        this.name = name;
-        this.age = age;
-        this.classMark = classMark;
-    }
-
     public int getId() {
         return id;
     }

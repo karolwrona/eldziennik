@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Dodaj ucznia</title>
+</head>
+<body>
+    <form th:action="@{/admin/pupilsave}" th:object="${pupil}" method="post">
+        <label for="name">Imię</label>
+        <input id="name" type="text" th:field="*{name}">
+        <label for="age">Wiek</label>
+        <input id="age" type="text" th:field="*{age}">
+        <label for="classMark">Klasa</label>
+        <input id="classMark" type="text" th:field="*{classMark}">
+        <input type="submit" value = "zapisz">
+    </form>
+</body>
+</html>
