@@ -17,6 +17,9 @@ public class Achievement {
     private Note note;
     private Date date;
 
+    public Achievement(){
+        this.date = new Date();
+    }
 
     public void setIdPupil(int idPupil) {
         this.idPupil = idPupil;

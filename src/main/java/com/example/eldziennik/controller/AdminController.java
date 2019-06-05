@@ -12,6 +12,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.List;
+
 
 @Controller
 public class AdminController {
@@ -53,7 +55,9 @@ public class AdminController {
 
     @GetMapping("/admin/addachievement")
     public String addAchievement(Model model) {
-
+        List<Pupil> pupils = pupilDao.findAll();
+        model.addAttribute("pupils", pupils);
+        model.addAttribute("achievement", new Achievement());
         return "addachievement";
     }
 
