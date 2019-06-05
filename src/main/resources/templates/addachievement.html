@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dodaj ocenę!</title>
+</head>
+<body>
+    <form th:action="@{admin/achievementsave}" th:object="${achievement}" method="post">
+        <select th:field="*{pupil.name}">
+            <option th:each="pupil"></option>
+        </select>
+    </form>
+</body>
+</html>

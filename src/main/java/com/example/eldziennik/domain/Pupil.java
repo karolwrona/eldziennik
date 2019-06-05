@@ -9,7 +9,7 @@ public class Pupil {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-    @Column(nullable = false)
+    @Column(unique = true, nullable = false)
     private String name;
     private int age;
     private String classMark;

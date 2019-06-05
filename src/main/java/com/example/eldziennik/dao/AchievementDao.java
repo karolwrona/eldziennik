@@ -1,13 +1,12 @@
 package com.example.eldziennik.dao;
 
-import com.example.eldziennik.domain.Pupil;
+import com.example.eldziennik.domain.Achievement;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
-public interface PupilDao extends JpaRepository<Pupil, Integer> {
-    List<Pupil> findAll();
-    String findNameById(int id);
+public interface AchievementDao extends JpaRepository<Achievement, Integer> {
+    List<Achievement> findAll();
 }

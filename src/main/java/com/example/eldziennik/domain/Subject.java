@@ -9,10 +9,11 @@ public class Subject {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     @Column(unique = true, nullable = false)
-    private String Name;
+    private String name;
 
-    public Subject(String name) {
-        Name = name;
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getId() {
@@ -20,10 +21,6 @@ public class Subject {
     }
 
     public String getName() {
-        return Name;
-    }
-
-    public void setName(String name) {
-        Name = name;
+        return name;
     }
 }

@@ -1,32 +1,60 @@
 package com.example.eldziennik.controller;
 
+import com.example.eldziennik.dao.AchievementDao;
 import com.example.eldziennik.dao.PupilDao;
+import com.example.eldziennik.dao.SubjectDao;
+import com.example.eldziennik.domain.Achievement;
 import com.example.eldziennik.domain.Pupil;
+import com.example.eldziennik.domain.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
+
 @Controller
 public class AdminController {
     @Autowired
     PupilDao pupilDao;
+    @Autowired
+    SubjectDao subjectDao;
+    @Autowired
+    AchievementDao achievementDao;
 
     @GetMapping("/admin")
     public String adminPage() {
             return "admin";
         }
 
-    @GetMapping("admin/addpupil")
+    @GetMapping("/admin/addpupil")
     public String addPupil(Model model) {
         model.addAttribute("pupil", new Pupil());
         return "addpupil";
     }
 
-    @PostMapping("admin/pupilsave")
+    @PostMapping("/admin/pupilsave")
     public String pupilSave(Pupil pupil, Model model) {
         pupilDao.save(pupil);
         return"success";
     }
+
+    @GetMapping("/admin/addsubject")
+    public String addSubject(Model model) {
+        model.addAttribute("subject", new Subject());
+        return "addsubject";
+    }
+
+    @PostMapping("/admin/subjectsave")
+    public String subjectSave(Subject subject, Model model) {
+        subjectDao.save(subject);
+        return "success";
+    }
+
+    @GetMapping("/admin/addachievement")
+    public String addAchievement(Model model) {
+
+        return "addachievement";
+    }
+
 }

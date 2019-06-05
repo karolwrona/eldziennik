@@ -5,7 +5,7 @@ import java.util.Date;
 
 @Entity
 @Table
-public class Achievements {
+public class Achievement {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
@@ -17,12 +17,6 @@ public class Achievements {
     private Note note;
     private Date date;
 
-    public Achievements(int idPupil, int idSubject, Note note) {
-        this.idPupil = idPupil;
-        this.idSubject = idSubject;
-        this.note = note;
-        this.date = new Date();
-    }
 
     public void setIdPupil(int idPupil) {
         this.idPupil = idPupil;
