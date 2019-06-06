@@ -14,7 +14,7 @@ public class Achievement {
     @JoinColumn(name = "subject_id")
     private int idSubject;
     @Column(nullable = false)
-    private Note note;
+    private int note;
     private Date date;
 
     public Achievement(){
@@ -29,7 +29,7 @@ public class Achievement {
         this.idSubject = idSubject;
     }
 
-    public void setNote(Note note) {
+    public void setNote(int note) {
         this.note = note;
     }
 
@@ -45,7 +45,7 @@ public class Achievement {
         return idSubject;
     }
 
-    public Note getNote() {
+    public int getNote() {
         return note;
     }
 

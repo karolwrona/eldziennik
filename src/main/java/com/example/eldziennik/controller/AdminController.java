@@ -4,6 +4,7 @@ import com.example.eldziennik.dao.AchievementDao;
 import com.example.eldziennik.dao.PupilDao;
 import com.example.eldziennik.dao.SubjectDao;
 import com.example.eldziennik.domain.Achievement;
+import com.example.eldziennik.domain.Note;
 import com.example.eldziennik.domain.Pupil;
 import com.example.eldziennik.domain.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,9 +57,18 @@ public class AdminController {
     @GetMapping("/admin/addachievement")
     public String addAchievement(Model model) {
         List<Pupil> pupils = pupilDao.findAll();
+        List<Subject> subjects = subjectDao.findAll();
         model.addAttribute("pupils", pupils);
+        model.addAttribute("subjects", subjects);
+        model.addAttribute("notes", Note.values());
         model.addAttribute("achievement", new Achievement());
         return "addachievement";
+    }
+
+    @PostMapping("/admin/achievementsave")
+    public String achevementSave(Achievement achievement, Model model) {
+        achievementDao.save(achievement);
+        return "success";
     }
 
 }

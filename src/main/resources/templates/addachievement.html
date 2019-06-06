@@ -5,10 +5,23 @@
     <title>Dodaj ocenę!</title>
 </head>
 <body>
-    <form th:action="@{admin/achievementsave}" th:object="${achievement}" method="post">
-        <select field="tekst">
+    <form th:action="@{/admin/achievementsave}" th:object="${achievement}" method="post">
+        Uczeń
+        <select th:field="${achievement.idPupil}">
             <option th:each="pupil:${pupils}" th:value="${pupil.id}" th:text="${pupil.name}"></option>
         </select>
+            <br>
+        Przedmiot
+        <select th:field="${achievement.idSubject}">
+            <option th:each="subject:${subjects}" th:value="${subject.id}" th:text="${subject.name}"></option>
+        </select>
+            <br>
+        Ocena
+        <select th:field="${achievement.note}">
+            <option th:each="note:${notes}" th:value="${note.value}" th:text="${note.name().toLowerCase()}"></option>
+        </select>
+            <br>
+        <input type="submit" value="zapisz ocenę">
     </form>
 </body>
 </html>
