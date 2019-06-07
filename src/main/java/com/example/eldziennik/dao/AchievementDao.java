@@ -9,4 +9,5 @@ import java.util.List;
 @Repository
 public interface AchievementDao extends JpaRepository<Achievement, Integer> {
     List<Achievement> findAll();
+    List<Achievement> findAchievementByIdPupil(int idPupil);
 }

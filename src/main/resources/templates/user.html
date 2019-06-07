@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Dziecko</title>
 </head>
 <body>
     <h2>Cześć dziecko!</h2>
+    <table>
+        <tr>
+            <th width="100px">Imię</th>
+            <th width="50px">Wiek</th>
+            <th width="50px">Klasa</th>
+        </tr>
+        <tr th:each="pupil: ${pupils}">
+            <td th:text="${pupil.name}"
+                th:onclick="'location.href= \'' +  @{/user/{i}(i=${pupil.id})}  + ' \' '">
+            <td th:text="${pupil.age}"></td>
+            <td th:text="${pupil.classMark}"></td>
+        </tr>
+    </table>
 </body>
 </html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Oceny</title>
+</head>
+<body>
+    <h1 th:text="${pupil.name}+' - oceny:'"></h1>
+    <br><hr>
+    <table>
+        <tr>
+            <th>Przedmiot</th>
+            <th>Oceny</th>
+        </tr>
+        <tr th:each="subject: ${subjects}">
+            <td th:text="${subject.name}"></td>
+
+        </tr>
+    </table>
+
+</body>
+</html>

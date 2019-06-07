@@ -9,5 +9,5 @@ import java.util.List;
 @Repository
 public interface PupilDao extends JpaRepository<Pupil, Integer> {
     List<Pupil> findAll();
-    String findNameById(int id);
+    Pupil findPupilById(int id);
 }
