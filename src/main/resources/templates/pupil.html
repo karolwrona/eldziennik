@@ -7,16 +7,22 @@
 <body>
     <h1 th:text="${pupil.name}+' - oceny:'"></h1>
     <br><hr>
-    <table>
-        <tr>
-            <th>Przedmiot</th>
-            <th>Oceny</th>
-        </tr>
-        <tr th:each="subject: ${subjects}">
-            <td th:text="${subject.name}"></td>
-
-        </tr>
-    </table>
+    <div th:each="subject: ${subjects}">
+        <h2 th:text="${subject.name}+':'"></h2>
+        <br>
+        <table>
+            <tr>
+                <th>Ocena</th>
+                <th>Data wpisu</th>
+            </tr>
+            <tr th:each="achievement:${achievements}" th:if="${achievement.idSubject} == ${subject.id}">
+                <td th:text="${achievement.note}"></td>
+                <td th:text="${#dates.format(achievement.date, 'dd-MM-yyyy HH:mm')}"></td>
+            </tr>
+        </table>
+        <br>
+        <hr>
+    </div>
 
 </body>
 </html>
