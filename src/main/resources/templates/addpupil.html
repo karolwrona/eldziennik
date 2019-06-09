@@ -2,18 +2,29 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../static/styles.css" />
+    <link rel="stylesheet" href="http://b2b.polami.eu/note_styles.css">
     <title>Dodaj ucznia</title>
 </head>
 <body>
+<h1>Dodaj ucznia!</h1>
+<br>
+<a href="\admin">Wróć</a>
+<div class="addPupil">
     <form th:action="@{/admin/pupilsave}" th:object="${pupil}" method="post">
-        <label for="name">Imię</label>
+        <label for="name">Imię:</label>
+        <br>
         <input id="name" type="text" th:field="*{name}">
-        <label for="age">Wiek</label>
+        <br>
+        <label for="age">Wiek:</label>
+        <br>
         <input id="age" type="text" th:field="*{age}">
-        <label for="classMark">Klasa</label>
+        <br>
+        <label for="classMark">Klasa:</label>
+        <br>
         <input id="classMark" type="text" th:field="*{classMark}">
+        <br>
         <input type="submit" value = "zapisz">
     </form>
+</div>
 </body>
 </html>

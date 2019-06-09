@@ -2,27 +2,32 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../static/styles.css" />
+    <link rel="stylesheet" href="http://b2b.polami.eu/note_styles.css">
     <title>Dodaj ocenę!</title>
 </head>
 <body>
+<h1>Dodaj ocenę!</h1>
+<br>
+<a href="\admin">Wróć</a>
+<div class="notes">
     <form th:action="@{/admin/achievementsave}" th:object="${achievement}" method="post">
-        Uczeń
+        <b><font size="6">Uczeń:</font></b>
         <select th:field="${achievement.idPupil}">
             <option th:each="pupil:${pupils}" th:value="${pupil.id}" th:text="${pupil.name}"></option>
         </select>
             <br>
-        Przedmiot
+        <b><font size="6">Przedmiot:</font></b>
         <select th:field="${achievement.idSubject}">
             <option th:each="subject:${subjects}" th:value="${subject.id}" th:text="${subject.name}"></option>
         </select>
             <br>
-        Ocena
+        <b><font size="6">Ocena:</font></b>
         <select th:field="${achievement.note}">
             <option th:each="note:${notes}" th:value="${note.value}" th:text="${note.name().toLowerCase()}"></option>
         </select>
             <br>
         <input type="submit" value="zapisz ocenę">
     </form>
+</div>
 </body>
 </html>

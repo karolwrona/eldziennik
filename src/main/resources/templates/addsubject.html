@@ -2,14 +2,19 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../static/styles.css" />
+    <link rel="stylesheet" href="http://b2b.polami.eu/note_styles.css">
     <title>Dodaj przedmiot</title>
 </head>
 <body>
+<h1>Dodaj Przedmiot!</h1>
+<br>
+<a href="\admin">Wróć</a>
+<div class="addSubject">
     <form th:action="@{/admin/subjectsave}" th:object="${subject}" method="post">
-        <label for="name">Przedmiot</label>
+        <label for="name">Przedmiot:</label>
         <input id="name" type="text" th:field="*{name}">
         <input type="submit" value = "zapisz">
     </form>
+</div>
 </body>
 </html>

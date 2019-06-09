@@ -1,0 +1,175 @@
+body{
+    background-image: url("dzienniczek.jpg");
+    background-color: aqua;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+p {
+    text-align: center;
+    font-family: "Bookman Old Style";
+    font-size: x-large;
+    font-weight: bold;
+}
+a {
+    font-family: "Bookman Old Style";
+    font-size: x-large;
+    font-weight: bold;
+    padding: 10px;
+}
+h2 {
+    font-family: "Bookman Old Style";
+    font-size: xx-large;
+}
+.notes {
+    position: center;
+    width: 500px;
+    height: 390px;
+    margin-left: 30%;
+    background: rgba(255, 255, 255, 0.5);
+}
+.addPupil {
+    position: center;
+    width: 500px;
+    height: 290px;
+    margin-left: 30%;
+    background: rgba(255, 255, 255, 0.5);
+}
+.addSubject {
+    position: center;
+    width: 500px;
+    height: 180px;
+    margin-left: 30%;
+    background: rgba(255, 255, 255, 0.5);
+}
+.adminPage{
+    position: center;
+    width: 500px;
+    height: 300px;
+    margin-left: 30%;
+    background: rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.error {
+    position: center;
+    width: 500px;
+    height: 300px;
+    margin-left: 30%;
+    margin-top: 10%;
+    background: rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.indexPage {
+    margin-top: 50px;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.log {
+    position: center;
+    width: 500px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.about {
+    position: center;
+    width: 500px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.pupilPage {
+    position: center;
+    width: 500px;
+    height: 200px;
+    margin-left: 30%;
+    background: rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.successPage {
+    position: center;
+    width: 700px;
+    height: 500px;
+    margin-left: 30%;
+    margin-top: 5%;
+    background: rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+.userPage {
+    position: center;
+    width: 500px;
+    height: 300px;
+    margin-left: 30%;
+    background: rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#pupilsName {
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: bold;
+}
+select {
+    width: 100%;
+    padding: 16px 20px;
+    border: black;
+    border-style: inset;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+input[type=submit] {
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 16px;
+    margin: 5% 5%;
+    cursor: pointer;
+    width: 90%;
+}
+input[type=text] {
+    width: 90%;
+    border: 3px solid black;
+    margin-left: 5%;
+    height: 30px;
+    font-size: large;
+}
+label {
+    text-align: center;
+    font-family: "Bookman Old Style";
+    font-size: x-large;
+    font-weight: bold;
+    margin-left: 33%;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    overflow-x: auto;
+}
+th {
+    background-color: aqua;
+}
